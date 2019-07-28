@@ -1,6 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Entities>
     <Agents>
+        <KioskWorker>
+            <name>售货员</name>
+            <description>在售货亭和商店为顾客提供产品。</description>
+        </KioskWorker>
+        <Chef>
+            <name>厨师</name>
+            <description>在厨房烹饪食物并将其送到出售食物的店铺。</description>
+        </Chef>
+        <AirlineRep>
+            <name>销售代表</name>
+            <description>为航空公司指派销售代表，以提高沟通和信任！他们将全天与航空公司保持良好的沟通。
+                不过要想让他们正常工作，您需要建立会议室，在那里他们才能自动安排会议。</description>
+        </AirlineRep>
         <CFO>
             <name>CFO</name>
             <description>首席财务官 - 让您研究财务相关的升级和能力，如银行贷款和改进财务报告。</description>
@@ -60,7 +73,7 @@
         </Staff>
         <VendorWorker>
             <name>供应商工人</name>
-            <description />
+            <description></description>
         </VendorWorker>
         <Workman>
             <name>工人</name>
@@ -68,64 +81,51 @@
         </Workman>
         <BaggageCar>
             <name>行李车</name>
-            <description />
+            <description><!-- not used --></description>
         </BaggageCar>
         <BaggageCarTest>
             <name>行李车测试</name>
-            <description />
+            <description><!-- not used --></description>
         </BaggageCarTest>
         <DeliveryTruck>
             <name>运输卡车</name>
-            <description />
+            <description><!-- not used --></description>
         </DeliveryTruck>
         <FuelDeliveryTruck>
             <name>燃油运输卡车</name>
-            <description />
+            <description><!-- not used --></description>
         </FuelDeliveryTruck>
         <FuelTruck>
             <name>燃油箱</name>
-            <description />
+            <description><!-- not used --></description>
         </FuelTruck>
         <GarbageTruck>
             <name>垃圾车</name>
-            <description />
+            <description><!-- not used --></description>
         </GarbageTruck>
         <GolfCart>
             <name>高尔夫车</name>
-            <description />
+            <description><!-- not used --></description>
         </GolfCart>
         <PassengerBus>
             <name>客车</name>
-            <description />
+            <description><!-- not used --></description>
         </PassengerBus>
         <PassengerTaxi>
             <name>乘客出租车</name>
-            <description />
+            <description><!-- not used --></description>
         </PassengerTaxi>
         <PassengerVehicle>
             <name>乘用车</name>
-            <description />
+            <description><!-- not used --></description>
         </PassengerVehicle>
         <SupplyTruck>
             <name>供应卡车</name>
-            <description />
+            <description><!-- not used --></description>
         </SupplyTruck>
-        <KioskWorker>
-            <name>售货员</name>
-            <description>在售货亭和商店为顾客提供产品。</description>
-        </KioskWorker>
-        <Chef>
-            <name>厨师</name>
-            <description>在厨房烹饪食物并将其送到出售食物的店铺。</description>
-        </Chef>
-        <AirlineRep>
-            <name>销售代表</name>
-            <description>为航空公司指派销售代表，以提高沟通和信任！他们将全天与航空公司保持良好的沟通。
-                不过要想让他们正常工作，您需要建立会议室，在那里他们才能自动安排会议。</description>
-        </AirlineRep>
         <LightRailTrain>
             <name>Light Rail Train</name>
-            <description />
+            <description><!-- not used --></description>
         </LightRailTrain>
     </Agents>
     <Objects>
@@ -135,9 +135,19 @@
             <Stairs>楼梯</Stairs>
             <Escalator>自动扶梯</Escalator>
         </generic>
+		
+        <!-- non-placeable -->
+		<DirtyFloor>
+            <name>肮脏的地板</name>
+        </DirtyFloor>
+        <TrashBag>
+            <name>垃圾袋</name>
+        </TrashBag>
+		
+		<!-- runway upgrades -->
         <RunwayApproachLights>
             <name>跑道接近指示灯</name>
-            <description />
+            <description></description>
         </RunwayApproachLights>
         <RunwayILS>
             <name>跑道 ILS</name>
@@ -156,10 +166,19 @@
             <name>风向袋</name>
             <description />
         </Windsock>
+		
+		<!-- gate upgrades -->
         <FuelPort>
             <name>燃油口</name>
             <description>能放置在舱门上的输出口，与地下管道相连，提供更快的再加燃油服务。</description>
         </FuelPort>
+		
+        <BoosterPanel>
+            <name>增压器面板</name>
+            <description>为您的行李中心提供额外的分拣能力，使他们能够每分钟分拣更多的行李。每个行李中心限2个。</description>
+        </BoosterPanel>
+		
+		
         <AircraftGateSmall>
             <name>机舱门(S)</name>
             <description>让飞机上下乘客。</description>
@@ -192,6 +211,14 @@
             <name>行李传送带</name>
             <description>连接到地下输送系统，提供自动行李解决方案。</description>
         </BaggageCarousel>
+        <BaggageCarouselSameLevel>
+            <name>行李传送带 (相同楼层)</name>
+            <description>连接到同一水平输送系统，以获得自动化行李解决方案。</description>
+        </BaggageCarouselSameLevel>
+        <BaggageCarouselfromAbove>
+            <name>行李传送带（从上方）</name>
+            <description>连接到一个以上的自动行李解决方案传送系统。</description>
+        </BaggageCarouselfromAbove>
         <Bar-Large>
             <name>吧台 - 大</name>
             <description />
@@ -248,10 +275,42 @@
             <name>咖啡厅桌子 B</name>
             <description>给乘客坐下吃东西的地方。</description>
         </CafeTableB>
+		<ConferenceTable1>
+            <name>玻璃会议桌</name>
+            <description>航空公司派出的高管将围绕一些问题与销售代表讨论重要事项。</description>
+        </ConferenceTable1>
+        <ConferenceTable2>
+            <name>轻木会议桌</name>
+            <description>航空公司派出的高管将围绕一些问题与销售代表讨论重要事项。</description>
+        </ConferenceTable2>
+        <ConferenceTable3>
+            <name>深色木质会议桌</name>
+            <description>航空公司派出的高管将围绕一些问题与销售代表讨论重要事项。</description>
+        </ConferenceTable3>
+        <ConferenceTable1Big>
+            <name>大玻璃会议桌</name>
+            <description>航空公司派出的高管将围绕一些问题与销售代表讨论重要事项。</description>
+        </ConferenceTable1Big>
+        <ConferenceTable2Big>
+            <name>大型轻木会议桌</name>
+            <description>航空公司派出的高管将围绕一些问题与销售代表讨论重要事项。</description>
+        </ConferenceTable2Big>
+        <ConferenceTable3Big>
+            <name>大型深色木质会议桌</name>
+            <description>航空公司派出的高管将围绕一些问题与销售代表讨论重要事项。</description>
+        </ConferenceTable3Big>
         <CashRegister>
             <name>收银台</name>
             <description>用来收款，在咖啡厅里的消费（食物）在这里结账。</description>
         </CashRegister>
+        <FoodWarmer>
+            <name>热菜自助台</name>
+            <description>在咖啡店里展示刚出锅的新鲜食物！乘客们按需拿取，带到收银台结账。</description>
+        </FoodWarmer>
+        <FoodCooler>
+            <name>凉菜自助台</name>
+            <description>在咖啡店里展示刚出锅的新鲜食物！乘客们按需拿取，带到收银台结账。</description>
+        </FoodCooler>
         <ChairB>
             <name>椅子 B</name>
             <description>给乘客坐下吃东西的地方。</description>
@@ -384,6 +443,14 @@
             <name>航班信息显示器</name>
             <description>乘客用这些显示器了解他们航班的信息，包括延误、取消或登机口变更。</description>
         </FlightInfoDisplay>
+        <FlightInfoDisplayXL>
+            <name>大型航班信息展示屏</name>
+            <description>一个更大的航班信息显示器，具有增加机场信息覆盖范围的功能。</description>
+        </FlightInfoDisplayXL>
+        <FlightInfoServer>
+            <name>航班信息展示屏</name>
+            <description>航班信息显示器，具有增加机场信息覆盖范围的功能。</description>
+        </FlightInfoServer>
         <FoodVending>
             <name>食品贩卖机</name>
             <description>为饥饿的乘客提供食物，同时为您赚取每笔$5。</description>
@@ -404,6 +471,11 @@
             <name>登机口工作人员台</name>
             <description>让乘客和员工协调机场内飞机的登机和下机。 每个登机口都需要一个。</description>
         </GateAgentDesk>
+        <ReceptionDesk>
+            <name>接待处</name>
+            <description>当由安全部门操作时，航空公司的访客可以使用它进入安全区域。
+                来访者包括到会议室开会的人和在办公室工作的航空公司管理人员。</description>
+        </ReceptionDesk>
         <HealthFoodKiosk>
             <name>健康食品亭</name>
             <description />
@@ -516,6 +588,10 @@
             <name>配菜车</name>
             <description>厨师把这个当做工作空间，准备和满足食物订单。 有足够的空间，一次满足1个订单。</description>
         </PrepCart>
+        <HotPlate>
+            <name>食物加热器</name>
+            <description>必须放在厨房中。在食物被送往商店前，保持加热.</description>
+        </HotPlate>
         <Refrigerator>
             <name>冰箱</name>
             <description>把披萨，寿司和甜甜圈放入到厨房供应的食物中。</description>
@@ -592,6 +668,12 @@
             <name>小便池</name>
             <description>满足男性乘客的生理需求。</description>
         </Urinal>
+        <CrossWalk>
+            <name>人行横道</name>
+            <description>为什么乘客要过马路？访问您在另一边提供的服务！</description>
+        </CrossWalk>
+		
+        <!-- utilities -->
         <BaggageDepot>
             <name>行李保管处</name>
             <description>停机坪车辆使用的室外装卸点，连接到地下传送带系统。</description>
@@ -615,6 +697,10 @@
             <name>燃料库</name>
             <description>机场燃油进货点。购买燃油后，燃料库通过管道，把燃油分配到与其相连的燃油箱。</description>
         </FuelDepot>
+        <FuelingStation>
+            <name>加油站</name>
+            <description>为您的燃料车提供联网存储罐中燃料的使用权。允许机场提供加油服务。</description>
+        </FuelingStation>
         <FuelTank>
             <name>燃油箱</name>
             <description>户外飞机燃油储存库，容量为344,000升。用于支持再加燃油。</description>
@@ -623,12 +709,11 @@
             <name>大燃油箱</name>
             <description>大型户外飞机燃油储存库，容量为1,000,000升。用于支持再加燃油。</description>
         </LargeFuelTank>
-        <DirtyFloor>
-            <name>肮脏的地板</name>
-        </DirtyFloor>
-        <TrashBag>
-            <name>垃圾袋</name>
-        </TrashBag>
+		
+        <Stairs>
+            <name>楼梯</name>
+            <description>允许乘客在两层楼之间行走的楼梯。</description>
+        </Stairs>
         <StairsUp>
             <name>向上楼梯</name>
             <description>可以让您的乘客往返于楼上的楼梯。</description>
@@ -637,6 +722,10 @@
             <name>向下楼梯</name>
             <description>可以让您的乘客往返于楼下的楼梯。</description>
         </StairsDown>
+        <Escalator>
+            <name>自动扶梯</name>
+            <description>允许乘客在两层楼之间行走的电子扶梯。只允许朝一个方向行驶。</description>
+        </Escalator>
         <EscalatorUp>
             <name>向上自动扶梯</name>
             <description>可以让您的乘客直接移动到楼上的自动扶梯。 单向运行。</description>
@@ -645,6 +734,7 @@
             <name>向下自动扶梯</name>
             <description>可以让您的乘客直接移动到楼下的自动扶梯。 单向运行。</description>
         </EscalatorDown>
+		
         <ConveyorDown>
             <name>行李输送机（向下）</name>
             <description>将行李从输送机所在楼层输送到楼下。 允许在设计行李输送机网络时对空间进行战略性使用。</description>
@@ -653,38 +743,41 @@
             <name>行李输送机（向上）</name>
             <description>将行李从输送机所在楼层输送到楼上。 允许在设计行李输送机网络时对空间进行战略性使用。</description>
         </ConveyorUp>
+        <ConveyorTransition>
+            <name>行李输送机</name>
+            <description>传送网对象，允许传送带在两层之间转换。允许在设计行李传送网络时战略性地利用空间。</description>
+        </ConveyorTransition>
+		
         <SmallGateStairs>
             <name>小型登机门楼梯</name>
             <description>将楼梯添加到您的小型登机门，让乘客只能从二楼登机。</description>
         </SmallGateStairs>
+		
         <MovingWalkway>
             <name>自动人行步道</name>
             <description>为乘客提供更快捷的长途旅行方式。</description>
         </MovingWalkway>
-        <FlightInfoDisplayXL>
-            <name>大型航班信息展示屏</name>
-            <description>一个更大的航班信息显示器，具有增加机场信息覆盖范围的功能。</description>
-        </FlightInfoDisplayXL>
-        <FlightInfoServer>
-            <name>航班信息展示屏</name>
-            <description>航班信息显示器，具有增加机场信息覆盖范围的功能。</description>
-        </FlightInfoServer>
+		
         <ArcadeDriver>
             <name>街机-驾驶游戏</name>
             <description>玩得开心一点，尽情的拐弯吧，你的道路你做主！</description>
         </ArcadeDriver>
+		
         <ArcadeRetro>
             <name>街机-复古游戏</name>
             <description>远古雷鸣！帕克斯需要远离幽灵怪物，直到他们开始眨眼！抓住机会采取行动吧！</description>
         </ArcadeRetro>
+		
         <ArcadeBlaster>
             <name>街机-弹幕游戏</name>
             <description>为了无聊的人诞生的外星生物！你降很快摆脱无聊的束缚</description>
         </ArcadeBlaster>
+		
         <ArcadePinball>
             <name>街机-弹球游戏</name>
             <description>帕克斯会怀念这块宝石的！</description>
         </ArcadePinball>
+		
         <DigitalAdDisplay>
             <name>数字广告展示器</name>
             <description>尽管会惹恼乘客 (对环境有不好的影响), 但它会带来一些利润.  利润的多少取决于它周边有多少行人!</description>
@@ -693,35 +786,17 @@
             <name>饮料自动售货机</name>
             <description>乘客会口渴，这是解决问题的一个方法。另外，一点额外的收入也不会有任何影响（一定要相应地设定价格）！</description>
         </DrinkVending>
+		
         <FlightInfoKiosk>
             <name>航班信息亭</name>
             <description>乘客经常需要帮助，找到他们要去的地方，以便他们能按时登机，而这些机器是绝对的黄金标准。
                 钟声也许不能救他们，但没关系——有了这个售货亭，他们会及时赶到登机口！</description>
         </FlightInfoKiosk>
-        <BoosterPanel>
-            <name>增压器面板</name>
-            <description>为您的行李中心提供额外的分拣能力，使他们能够每分钟分拣更多的行李。每个行李中心限2个。</description>
-        </BoosterPanel>
-        <FuelingStation>
-            <name>加油站</name>
-            <description>为您的燃料车提供联网存储罐中燃料的使用权。允许机场提供加油服务。</description>
-        </FuelingStation>
-        <FoodWarmer>
-            <name>热菜自助台</name>
-            <description>在咖啡店里展示刚出锅的新鲜食物！乘客们按需拿取，带到收银台结账。</description>
-        </FoodWarmer>
-        <FoodCooler>
-            <name>凉菜自助台</name>
-            <description>在咖啡店里展示刚出锅的新鲜食物！乘客们按需拿取，带到收银台结账。</description>
-        </FoodCooler>
-        <HotPlate>
-            <name>食物加热器</name>
-            <description>必须放在厨房中。在食物被送往商店前，保持加热.</description>
-        </HotPlate>
-        <ArcadeDriving>
-            <name>街机-驾驶游戏</name>
-            <description>玩得开心一点，尽情的拐弯吧，你的道路你做主！</description>
-        </ArcadeDriving>
+		
+        <RoadRamp>
+            <name>道路坡道</name>
+            <description>允许道路过渡到单个标高。</description>
+        </RoadRamp>
         <RoadRampUp>
             <name>向上坡道</name>
             <description>可以给公路提高一层楼.</description>
@@ -734,6 +809,8 @@
             <name>地下燃油库</name>
             <description>一个极大尺寸的地下燃油库.  将占用地下一层和地下二层， 并且在建设时上方不能有任何建筑.</description>
         </UndergroundFuelTank>
+		
+		<!-- All displays use the same description. -->
         <displaydescription>Display {0} for your passengers to buy in Store zones! Can hold {1} at a time.</displaydescription>
         <BookDisplayA>
             <name>图书展示柜 A</name>
@@ -820,63 +897,6 @@
             <description>控制乘客在机场内的行走路线。
                 使用时要小心计划，记住乘客必须始终有进入/离开机场的通道，以防错过航班或发生紧急情况！</description>
         </OneWayPath>
-        <ReceptionDesk>
-            <name>接待处</name>
-            <description>当由安全部门操作时，航空公司的访客可以使用它进入安全区域。
-                来访者包括到会议室开会的人和在办公室工作的航空公司管理人员。</description>
-        </ReceptionDesk>
-        <CrossWalk>
-            <name>人行横道</name>
-            <description>为什么乘客要过马路？访问您在另一边提供的服务！</description>
-        </CrossWalk>
-        <BaggageCarouselSameLevel>
-            <name>行李传送带 (相同楼层)</name>
-            <description>连接到同一水平输送系统，以获得自动化行李解决方案。</description>
-        </BaggageCarouselSameLevel>
-        <BaggageCarouselfromAbove>
-            <name>行李传送带（从上方）</name>
-            <description>连接到一个以上的自动行李解决方案传送系统。</description>
-        </BaggageCarouselfromAbove>
-        <ConferenceTable1>
-            <name>玻璃会议桌</name>
-            <description>航空公司派出的高管将围绕一些问题与销售代表讨论重要事项。</description>
-        </ConferenceTable1>
-        <ConferenceTable2>
-            <name>轻木会议桌</name>
-            <description>航空公司派出的高管将围绕一些问题与销售代表讨论重要事项。</description>
-        </ConferenceTable2>
-        <ConferenceTable3>
-            <name>深色木质会议桌</name>
-            <description>航空公司派出的高管将围绕一些问题与销售代表讨论重要事项。</description>
-        </ConferenceTable3>
-        <ConferenceTable1Big>
-            <name>大玻璃会议桌</name>
-            <description>航空公司派出的高管将围绕一些问题与销售代表讨论重要事项。</description>
-        </ConferenceTable1Big>
-        <ConferenceTable2Big>
-            <name>大型轻木会议桌</name>
-            <description>航空公司派出的高管将围绕一些问题与销售代表讨论重要事项。</description>
-        </ConferenceTable2Big>
-        <ConferenceTable3Big>
-            <name>大型深色木质会议桌</name>
-            <description>航空公司派出的高管将围绕一些问题与销售代表讨论重要事项。</description>
-        </ConferenceTable3Big>
-        <Stairs>
-            <name>楼梯</name>
-            <description>允许乘客在两层楼之间行走的楼梯。</description>
-        </Stairs>
-        <Escalator>
-            <name>自动扶梯</name>
-            <description>允许乘客在两层楼之间行走的电子扶梯。只允许朝一个方向行驶。</description>
-        </Escalator>
-        <RoadRamp>
-            <name>道路坡道</name>
-            <description>允许道路过渡到单个标高。</description>
-        </RoadRamp>
-        <ConveyorTransition>
-            <name>行李输送机</name>
-            <description>传送网对象，允许传送带在两层之间转换。允许在设计行李传送网络时战略性地利用空间。</description>
-        </ConveyorTransition>
     </Objects>
     <Foods>
         <Pizza>披萨</Pizza>
